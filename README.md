@@ -39,4 +39,35 @@ Awesome! Now you can use the device driver located at:
 ```
 The name of the file is `driver.py`.
 
-
+## Rolling your own build alternative option
+1. clone repo
+2. open terminal and browse to root dir of repo
+3. Create python 2.7 environment in Anaonda with:
+```
+conda create --name keyboard python=2.7
+```
+4. Activate the newly created conda envirionment with:
+```
+conda activate keyboard
+```
+5. From within the root directory of this repo install the software of this repo with:
+```
+python setup.py build
+```
+6. Then install the software you just build with command:
+```
+python setup.py install
+```
+7. Go to the newly installed software with:
+```
+cd build/lib/src/bin
+```
+8. Install the required dependencies with:
+```
+pip install evdev
+```
+9. run the driver with command:
+```
+python driver.py
+```
+(Currently yields error cause it needs sudo, and sudo doesn't have python (with command `sudo python driver.py`))
