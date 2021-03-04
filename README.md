@@ -39,7 +39,7 @@ Awesome! Now you can use the device driver located at:
 ```
 The name of the file is `driver.py`.
 
-## Rolling your own build alternative option
+## Rolling your own build - alternative option I
 1. clone repo
 2. open terminal and browse to root dir of repo
 3. Create python 2.7 environment in Anaonda with:
@@ -71,3 +71,15 @@ pip install evdev
 python driver.py
 ```
 (Currently yields error cause it needs sudo, and sudo doesn't have python (with command `sudo python driver.py`))
+
+## Rolling your own build - alternative option II
+```
+sudo apt install python2.7
+sudo apt-get install software-properties-common
+sudo apt-add-repository universe
+sudo apt-get update
+sudo apt-get install python-pip
+
+curl https://bootstrap.pypa.io/get-pip.py --output get-pip.py
+sudo python2 get-pip.py
+```
